@@ -1,6 +1,4 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "cougar.py", "use": "@now/py" }
-  ]
+  "builds": [{ "src": "*.py", "use": "@now/python" }]
 }
