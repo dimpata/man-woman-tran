@@ -10,7 +10,7 @@ RUN pip install torch_nightly -f https://download.pytorch.org/whl/nightly/cpu/to
 RUN pip install fastai
 
 # Install starlette and uvicorn
-RUN uninstall starlette
+RUN pip uninstall starlette
 RUN pip install starlette==0.10.5 uvicorn python-multipart aiohttp
 
 ADD cougar.py cougar.py
