@@ -94,4 +94,4 @@ def redirect_to_homepage(request):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8008)
+    app.run(app, host="0.0.0.0", port=8008)
