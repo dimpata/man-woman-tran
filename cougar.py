@@ -28,16 +28,9 @@ cat_images_path = Path("/tmp")
 cat_fnames = [
     "/{}_1.jpg".format(c)
     for c in [
-        "Bobcat",
-        "Mountain-Lion",
-        "Domestic-Cat",
-        "Western-Bobcat",
-        "Canada-Lynx",
-        "North-American-Mountain-Lion",
-        "Eastern-Bobcat",
-        "Central-American-Ocelot",
-        "Ocelot",
-        "Jaguar",
+        "man",
+        "trans",
+        "woman",
     ]
 ]
 cat_data = ImageDataBunch.from_name_re(
@@ -47,9 +40,9 @@ cat_data = ImageDataBunch.from_name_re(
     ds_tfms=get_transforms(),
     size=224,
 )
-cat_learner = ConvLearner(cat_data, models.resnet34)
+cat_learner = ConvLearner(cat_data, models.resnet18)
 cat_learner.model.load_state_dict(
-    torch.load("usa-inaturalist-cats.pth", map_location="cpu")
+    torch.load("export_resnet18.pkl", map_location="cpu")
 )
 
 
