@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [{ 
     "src": "*.py", "use": "@now/python",
-    "config": { "maxLambdaSize": "150mb" }
+    "config": { "maxLambdaSize": "1500mb" }
   }],
   "routes": [{ "src": "/", "dest": "/cougar.py" }]
 }
