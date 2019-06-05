@@ -11,7 +11,7 @@ RUN pip install fastai
 RUN pip install starlette uvicorn python-multipart aiohttp
 
 ADD cougar.py cougar.py
-ADD usa-inaturalist-cats.pth usa-inaturalist-cats.pth
+ADD export_resnet18.pkl export_resnet18.pkl
 
 # Run it once to trigger resnet download
 RUN python cougar.py
