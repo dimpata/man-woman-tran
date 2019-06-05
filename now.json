@@ -3,6 +3,6 @@
   "builds": [{ 
     "src": "*.py", "use": "@now/python",
     "config": { "maxLambdaSize": "150mb" }
-  }]
+  }],
   "routes": [{ "src": "/", "dest": "/cougar.py" }]
 }
